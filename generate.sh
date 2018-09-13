@@ -9,6 +9,8 @@ FRAME_MAX=745
 PER_HIT=3
 FST_HIT=1
 
+test -d $DSTPATH || mkdir -p $DSTPATH
+
 echo "Wipe directory"
 rm -f "$DSTPATH/*"
 
