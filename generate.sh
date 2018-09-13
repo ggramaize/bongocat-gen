@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MYPATH=/home/fangolnor/BongoCat
+MYPATH=$(pwd)
 
 SRCPATH=$MYPATH/keys
 DSTPATH=$MYPATH/result
@@ -79,4 +79,3 @@ while read -r line; do
 done < "$MYPATH/hitmap.txt"
 
 ffmpeg -y -framerate 30 -i $DSTPATH/%03d.png -i $MYPATH/mnothing.wav -c:a mp3 -ab 192k $MYPATH/video.mp4
-#ffmpeg
